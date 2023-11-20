@@ -207,6 +207,9 @@ body {
           transform: translateY(0px);
       }
   }
+  .slick-prev:before,.slick-next:before{
+    color: #000000 !important;
+  }
 /* Media query for responsive design */
 @media (max-width: 991px) {
     .sd_header .sd_header_wrapper .sd_search_nav_container .sd_nav_container{
@@ -470,6 +473,7 @@ ul{
     margin: auto;
     padding-top: 8px;
     padding-inline: 8px;
+    padding-block: 35px;
 }
 .products_container .product_container{
     display: flex;
