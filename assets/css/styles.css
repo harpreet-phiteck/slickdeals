@@ -949,3 +949,8 @@ main a {
         line-height: min(4vw, 30px);
     }
 }
+@media screen and (max-width: 320px) {
+    .deal_double_sec .deal_day_txt {
+        padding: 20px;
+    }
+}
