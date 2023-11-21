@@ -800,6 +800,21 @@ main a {
     .offer_wrapper .offer_sec .offer_sec_elements p {
         width: min(28vw, 245px);
     }
+    /* Deal Categories Page */
+    .catergory_wrapper .category_sec .category {
+        width: 20%;
+    }
+    .page_title_sec h3 {
+        font-size: min(4vw, 30px);
+        line-height: min(5vw, 40px);
+    }
+    .catergory_wrapper h3 {
+        font-size: min(3vw, 21px);
+        line-height: min(4vw, 30px);
+    }
+    .sub-category-sec {
+        width: 50%;
+    }
 }
 @media screen and (max-width: 680px) {
     .banner_sec {
@@ -837,6 +852,7 @@ main a {
         width: 100%;
         align-items: center;
         row-gap: 10px;
+        padding: 40px;
     }
     .mobile_version .deal_double_sec .deal_day_txt .deal_day_img {
         width: 100%;
@@ -846,6 +862,9 @@ main a {
     }
     .offer_wrapper {
         display: none;
+    }
+    .offer_wrapper .offer_sec {
+        padding: 15px 20px 15px 20px;
     }
     .mobile_version .offer_wrapper {
         display: flex;
@@ -863,6 +882,21 @@ main a {
     }
     .popular_deal_carousal h2 {
         text-align: center;
+    }
+    /* Deal Categories Page  */
+    .catergory_wrapper .category_sec .category {
+        width: 50%;
+    }
+    .page_title_sec h3 {
+        font-size: min(5vw, 30px);
+        line-height: min(6vw, 40px);
+    }
+    .catergory_wrapper h3 {
+        font-size: min(4vw, 21px);
+        line-height: min(5vw, 30px);
+    }
+    .sub-category-sec {
+        width: 100%;
     }
 }
 @media screen and (max-width: 400px) {
@@ -901,5 +935,17 @@ main a {
         font-size: 18px;
         line-height: 28px;
         text-align: center;
+    }
+    /* Deal Categories Page  */
+    .catergory_wrapper .category_sec .category {
+        width: 100%;
+    }
+    .page_title_sec h3 {
+        font-size: min(5vw, 30px);
+        line-height: min(6vw, 40px);
+    }
+    .catergory_wrapper h3 {
+        font-size: min(4vw, 21px);
+        line-height: min(4vw, 30px);
     }
 }
