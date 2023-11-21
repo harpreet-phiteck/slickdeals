@@ -194,7 +194,7 @@
             <div class="product_container latest_deals_slider">
 
 
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -228,7 +228,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -262,7 +262,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -296,7 +296,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -330,7 +330,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -364,7 +364,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -398,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -432,7 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="product-card">
+                <div class="product-card product-card-slick">
                     <div class="badge">Hot</div>
                     <div class="product_found" style="display: flex; align-items: center; padding-bottom: 5px;">
                         <div class="product_found_img">
@@ -937,28 +937,46 @@ $('.latest_deals_slider').slick({
   arrows: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1370,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+        arrows: false,
+      }
+    },
+    {
+      breakpoint: 991,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        dots: true,
+        arrows: false,
       }
     },
     {
-      breakpoint: 600,
+      breakpoint: 768,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 6
+        slidesToScroll: 2,
+        infinite: true,
+        dots: true,
+        arrows: false,
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 486,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 6
+        slidesToScroll: 1,
+        infinite: true,     
+        arrows: false,   
+        autoplay: true,
       }
     }
+
     // You can unslick at a given breakpoint now by adding:
     // settings: "unslick"
     // instead of a settings object
