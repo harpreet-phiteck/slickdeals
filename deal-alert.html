@@ -733,6 +733,14 @@
             }]
             });
         });
+        const popupMenu = () => {
+            const menu = document.getElementById("menu");
+            const bar = document.querySelectorAll(".bar")
+            menu.classList.toggle("active");
+            bar[0].classList.toggle("rotate_bar1");
+            bar[1].classList.toggle("rotate_bar3");
+            bar[2].classList.toggle("rotate_bar2");
+        };
       </script>
 </body>
 </html>
