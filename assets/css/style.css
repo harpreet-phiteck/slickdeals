@@ -339,16 +339,16 @@ body {
 /* ----------------------- */
 
 /* footer */
-.container{
+.footer .container{
 	max-width: 1496px;
 	margin:auto;
     padding-inline: 15px;
 }
-.row{
+.footer .row{
 	display: flex;
 	flex-wrap: wrap;
 }
-ul{
+.footer ul{
 	list-style: none;
 }
 .footer{
