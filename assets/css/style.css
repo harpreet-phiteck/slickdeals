@@ -5,6 +5,7 @@
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f6f6;
 }
 .sd_header{
     background-color: #333333;
@@ -663,17 +664,49 @@ ul{
         justify-content: center;
         flex-wrap: wrap;
     }
-    .product-card {
-        width: 90%;  
-        max-width: 280px;      
-        margin-inline: 8%;
+    .latest_deals .product-card {
+        width: 100%;  
+        max-width: 100%; 
+        margin: auto;
+        margin-block: 10px;     
+        display: flex;
+        align-items: flex-start;
+        padding: 8px;
+        border-radius: 5px;
     }
     .product-card-slick{
         width: 8%;
-        max-width: 280px;   
+        max-width: 290px;   
         margin-inline: .8%;
     }
- 
+    .latest_deals .product_found{
+        display: none !important;
+    }
+    .latest_deals .product-tumb{
+        width: 200px;
+        align-items: flex-start;
+        padding-block: 8px;
+        border-radius: 5px;
+    }
+    .latest_deals .product-details{
+        padding-top: 0px;
+        padding-left: 5px;
+    }
+     .product-details h4 a {
+        font-size: 14px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+    .latest_deals .product-bottom-details {
+        overflow: hidden;
+        border-top:none;
+        padding-top: 2px;
+        margin-top: 2px;
+    } 
+    .latest_deals .product-links{
+        width: 50% !important;
+        justify-content: space-between;
+    }
 }
 @media screen and (max-width: 386px) {
     .product-card {
@@ -683,7 +716,7 @@ ul{
     }
     .product-card-slick{
         width: 4.8%;
-        max-width: 300px;   
+        max-width: 306px;   
         margin-inline: .5%;
     }
 }
