@@ -843,6 +843,9 @@ body {
     color: #333 !important;
     font-size: 10px;
 }
+.slick-arrow {
+    display: none !important;
+}
 /* Deal Categories Page Css Ends*/
 
 /* Media Queries of Deal Alert Page */
