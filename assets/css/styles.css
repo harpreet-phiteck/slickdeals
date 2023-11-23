@@ -1118,6 +1118,9 @@ body {
     .banner_sec .banner_img_sec {
         width: min(33%, 475px);
     }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_detail .deal_detail_txt .more_options {
+        column-gap: 8px;
+    }
 }
 @media screen and (max-width: 1080px) {
     .banner_sec .banner_txt_sec {
@@ -1144,19 +1147,95 @@ body {
         width: min(28vw, 245px);
     }
     /* Deal Categories Page */
-    .catergory_wrapper .category_sec .category {
-        width: 20%;
+    .deal-category-page .page_title_sec {
+        display: none;
     }
-    .page_title_sec h3 {
-        font-size: min(4vw, 30px);
-        line-height: min(5vw, 40px);
+    .title_banner_sec {
+        display: none;
     }
     .catergory_wrapper h3 {
-        font-size: min(3vw, 21px);
-        line-height: min(4vw, 30px);
+        display: none;
     }
-    .sub-category-sec {
-        width: 50%;
+    .catergory_wrapper .category_sec {
+        display: none;
+    }
+    .mobile_version {
+        display: flex !important;
+        margin: 20px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .mobile_version .mobile_category_wrapper {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 15px;
+    }
+    .mobile_version .mobile_category_wrapper .category_box {
+        width: 100px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    } 
+    .mobile_version .mobile_category_wrapper .category_box img {
+        width: 100%;
+    }
+    .mobile_version .mobile_category_wrapper .category_box p {
+        display: block;
+        font-size: 12px;
+        background-color: #0072bc;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        line-height: 30px;
+        border-radius: 0 0 4px 4px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-shadow: 0 2px 0 0 #0f4a70;
+    }
+    .mobile_version .mobile_category_links {
+        display: flex;
+        width: 100%;
+        flex-flow: column wrap;
+    }
+    .mobile_version .mobile_category_links h3 {
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 15px;
+    }
+    .mobile_version .mobile_category_links .category_link_wrapper {
+        background: #fff;
+        border: 1px #ccc solid;
+        border-radius: 4px;
+    }
+    .mobile_version .mobile_category_links .category_link_wrapper .category_link_box {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .mobile_version .mobile_category_links .category_link_wrapper .category_link_box a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #666;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 15px;
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+    .mobile_version .mobile_category_links .category_link_wrapper .category_link_box .panel {
+        display: none;
+        width: 100%;
+        align-items: center;
+        justify-content: flex-start;
+        flex-flow: column wrap;
     }
 }
 @media screen and (max-width: 680px) {
