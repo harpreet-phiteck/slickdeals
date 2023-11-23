@@ -704,7 +704,7 @@ body {
     max-width: 100px;
     margin-bottom: 19px;
 }
-.deal_alert_page a {
+.popular_deal_element a {
     display: flex;
     width: min(100%, 200px);
     height: 40px;
