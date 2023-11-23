@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <title>Simple Reistration Form</title>
+</head>
+<body>   
+    <form>
+        <div class="post_deal_container">
+          <h1>Share a Deal or Coupon</h1>
+          <p>  Have the scoop on a great deal? Create a post to share it with our community!
+            If this is your first time posting or you want some extra tips, <a href="#" style="color:#0171d3;"> check out our video.</a> </p>
+            <div class="post_deals_img">
+                <img src="assets/images/deals_example.png" width="100%" alt="post_example_img">
+            </div>
+              <label for="dealurl">Deal URL</label>
+            <input type="text" name="dealurl" placeholder="http://" required>
+          <label for="dealtitle">Deal Title</label>
+          <input type="text" placeholder='Deal or product name with price (e.g. 60" Sumsung 4K TV $600 + Free Shipping)' name="dealtitle" required>
+          
+          <label for="saleprice">Sale Price</label>
+          <div class="input-group">
+            <span class="input-group-addon">
+              $
+            </span>
+            <input type="number" value="4.99" name="saleprice" required style="margin: 0px;">
+        </div>
+        <label for="listprice">List Price</label>
+          <div class="input-group">
+            <span class="input-group-addon">
+              $
+            </span>
+            <input type="number" value="4.99" name="listprice" required style="margin: 0px;">
+          
+          </div>
+        
+      
+          
+          <label>Description</label>
+          <!--div id="code-editor">
+  <div class="editor-block-controls">
+    <div>
+        <button class="command" title="Undo" data-command='undo'><i class="fas fa-undo"></i></button>
+        <button class="command" title="Redo" data-command='redo'><i class="fas fa-redo"></i></button>
+    </div>
+    <div>
+      <button class="command" title="Title" data-command='italic'><i class="fas fa-italic"></i></button>
+      <button class="command" title="Bold" data-command='bold'><i class="fas fa-bold"></i></button>
+      <button class="command" title="Horizontal Rule" data-command="insertHorizontalRule">Hr</button>
+      <button class='command' title="Strike-Through" data-command='strikethrough'><strike>abc</strike></button>
+      <button class="command" title="H1" data-command='h1'>H1</button>
+      <button class="command" title="H2" data-command='h2'>H2</button>
+      <button class="command" title="Underline" data-command='underline'>U</button>
+      <button  class="command" title="Paragraph" data-command="p"><i class="fas fa-paragraph"></i></button>
+    </div>
+    <div>
+      <button  class="command" title="Indent" data-command="indent"><i class="fas fa-indent"></i></button>
+      <button  class="command" title="Outdent" data-command="outdent"><i class="fas fa-outdent"></i></button>
+    </div>
+    <div>
+      <button class="command" title="Justify-Left" data-command='justifyleft'><i class="fas fa-align-left"></i></button>
+      <button class="command" title="Justify-Center" data-command='justifycenter'><i class="fas fa-align-justify"></i></button>
+      <button class="command" title="Justify-Right" data-command='justifyright'><i class="fas fa-align-right"></i></button>
+    </div>
+  </div>
+  <div class="editor-block-controls">
+    <div>
+       <button class="command" title="Blockquote" data-command='formatBlock'><i class="fas fa-quote-right"></i></button>
+      <button class="command" title="Superscript" data-command='superscript'>A<sup>abc</sup></button>
+      <button class="command" title="Blockquote" data-command='subscript'>A<sub>abc</sub></button>
+    </div>
+    <div>
+      <button class="command" title="Decrease font" data-command='decreasefontsize'><sub>A</sub></button>
+      <button class="command" title="Increase font" data-command='increasefontsize'><i class="fas fa-font"></i></button>
+    </div>
+    <div>
+      <select class="wsy-command" title="Font size">
+        <option value="1">small</option>
+        <option value="2">normal</option>
+        <option value="3">medium</option>
+        <option value="4">large</option>
+        <option value="5">x-large</option>
+        <option value="6">xx-large</option>
+        <option value="7">xxx-large</option>
+      </select>
+    </div>
+  </div>
+<div id="editor-block-content" contenteditable>
+</div>
+</div-->
+
+<div class="wsyig"></div>
+<label for="categories">Categories</label>
+<input type="text" placeholder="Enter Password" name="categories" required>               
+            <br>
+          
+      
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      
+          <div class="clearfix">
+      
+            <button type="submit" class="btn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha512-U6K1YLIFUWcvuw5ucmMtT9HH4t0uz3M366qrF5y4vnyH6dgDzndlcGvH/Lz5k8NFh80SN95aJ5rqGZEdaQZ7ZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+    //WSYJA
+(function(window){
+  /**
+  **  To use start with the 'init(conatiner_id/container_class)'
+  **
+  **
+  **/
+  // You can enable the strict mode commenting the following line  
+ //'use strict';
+
+  // Main library 
+  function myLibrary(){
+    let _myLibraryObject = {};
+    //  Private variables
+    let defaults = {
+      container: null,
+      html: `<div id="code-editor">
+              <div class="editor-block-controls">
+                <div>
+                    <button class="command" title="Undo" data-command='undo'><i class="fas fa-undo"></i></button>
+                    <button class="command" title="Redo" data-command='redo'><i class="fas fa-redo"></i></button>
+                </div>
+                <div>
+                  <button class="command" title="Title" data-command='italic'><i class="fas fa-italic"></i></button>
+                  <button class="command" title="Bold" data-command='bold'><i class="fas fa-bold"></i></button>
+                  <button class="command" title="Horizontal Rule" data-command="insertHorizontalRule">Hr</button>
+                  <button class='command' title="Strike-Through" data-command='strikethrough'><strike>abc</strike></button>
+                  <button class="command" title="H1" data-command='h1'>H1</button>
+                  <button class="command" title="H2" data-command='h2'>H2</button>
+                  <button class="command" title="Underline" data-command='underline'>U</button>
+                  <button  class="command" title="Paragraph" data-command="p"><i class="fas fa-paragraph"></i></button>
+                </div>
+                <div>
+                  <button  class="command" title="Indent" data-command="indent"><i class="fas fa-indent"></i></button>
+                  <button  class="command" title="Outdent" data-command="outdent"><i class="fas fa-outdent"></i></button>
+                </div>
+                <div>
+                  <button class="command" title="Justify-Left" data-command='justifyleft'><i class="fas fa-align-left"></i></button>
+                  <button class="command" title="Justify-Center" data-command='justifycenter'><i class="fas fa-align-justify"></i></button>
+                  <button class="command" title="Justify-Right" data-command='justifyright'><i class="fas fa-align-right"></i></button>
+                </div>
+              </div>
+              <div class="editor-block-controls">
+                <div>
+                   <button class="command" title="Blockquote" data-command='formatBlock'><i class="fas fa-quote-right"></i></button>
+                  <button class="command" title="Superscript" data-command='superscript'>A<sup>abc</sup></button>
+                  <button class="command" title="Blockquote" data-command='subscript'>A<sub>abc</sub></button>
+                </div>
+                <div>
+                  <button class="command" title="Decrease font" data-command='decreasefontsize'><sub>A</sub></button>
+                  <button class="command" title="Increase font" data-command='increasefontsize'><i class="fas fa-font"></i></button>
+                </div>
+                <div>
+                  <select class="wsy-command" title="Font size">
+                    <option value="1" selected>small</option>
+                    <option value="2">normal</option>
+                    <option value="3">medium</option>
+                    <option value="4">large</option>
+                    <option value="5">x-large</option>
+                    <option value="6">xx-large</option>
+                    <option value="7">xxx-large</option>
+                  </select>
+                </div>
+              </div>
+            <div id="editor-block-content" contenteditable></div>
+            </div>`
+    };
+
+    // Methods of myLibrary
+    _myLibraryObject.init = function(container){
+          defaults.container = document.querySelector(container);
+          _myLibraryObject.setUI();
+          _myLibraryObject.setListeners();
+          return defaults.container;
+    };
+    
+    _myLibraryObject.setUI = function(){
+      if(defaults.container !== null && defaults.container)
+        defaults.container.innerHTML = defaults.html;  
+    };
+    
+    _myLibraryObject.setListeners = function(){
+      for(let el of defaults.container.querySelectorAll('button.command')){
+          el.addEventListener('mousedown', function(e){
+                  let command = e.currentTarget.getAttribute('data-command');
+                switch(command) {
+                        case 'h1':
+                        case 'h2':
+                        case 'p':
+                          document.execCommand('formatBlock', false, command);
+                          break;
+                        case 'formatBlock': 
+                          document.execCommand('formatBlock', false, "blockquote");
+                          break;
+                        case 'increasefontsize': 
+                          document.execCommand('fontSize', false, 5);
+                          break;
+                        case 'decreasefontsize': 
+                          document.execCommand('fontSize', false, 2);
+                          break;
+                        default:
+                          document.execCommand(command, false, command);
+                          break;
+                      }
+              });
+      }
+      defaults.container.querySelector('select').addEventListener('change',(e)=>{
+        document.execCommand('fontSize', false, e.target.value); 
+      });
+       
+    };
+    
+    return _myLibraryObject;
+  }
+
+  // We need that our library is globally accesible, then we save in the window
+  if(typeof(window.wsyJA) === 'undefined'){
+    window.wsyJA = myLibrary();
+  }
+})(window);
+
+wsyJA.init('.wsyig');
+ </script>
+</body>
+</html>
