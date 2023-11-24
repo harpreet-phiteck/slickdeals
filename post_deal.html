@@ -20,23 +20,23 @@
                 <img src="assets/images/deals_example.png" width="100%" alt="post_example_img">
             </div>
               <label for="dealurl">Deal URL</label>
-            <input type="text" name="dealurl" placeholder="http://" required>
+            <input type="text" id="dealurl" name="deal_url" placeholder="http://" required>
           <label for="dealtitle">Deal Title</label>
-          <input type="text" placeholder='Deal or product name with price (e.g. 60" Sumsung 4K TV $600 + Free Shipping)' name="dealtitle" required>
+          <input type="text" id="dealtitle" placeholder='Deal or product name with price (e.g. 60" Sumsung 4K TV $600 + Free Shipping)' name="deal_title" required>
           
           <label for="saleprice">Sale Price</label>
           <div class="input-group">
-            <span class="input-group-addon">
+            <span class="input-group-addon" style="border-bottom-left-radius: 4px; border-top-left-radius: 4px;">
               $
             </span>
-            <input type="number" value="4.99" name="saleprice" required style="margin: 0px;">
+            <input type="number" value="4.99" id="saleprice" name="sale_price" required style="margin: 0px; border-bottom-left-radius: 0px; border-top-left-radius: 0px;">
         </div>
         <label for="listprice">List Price</label>
           <div class="input-group">
-            <span class="input-group-addon">
+            <span class="input-group-addon" style="border-bottom-left-radius: 4px; border-top-left-radius: 4px;">
               $
             </span>
-            <input type="number" value="4.99" name="listprice" required style="margin: 0px;">
+            <input type="number" value="4.99" id="listprice" name="list_price" required style="margin: 0px; border-bottom-left-radius: 0px; border-top-left-radius: 0px;">
           
           </div>
         
@@ -97,15 +97,24 @@
 
 <div class="wsyig"></div>
 <label for="categories">Categories</label>
-<input type="text" placeholder="Enter Password" name="categories" required>               
+<input type="text" placeholder="Add one or more categories" id="categories" name="Categories" required>               
+<label for="stores">Stores</label>
+<input type="text" placeholder="Add one or more stores" id="stores" name="Stores" required>               
+<label for="categories">Brands</label>
+<input type="text" placeholder="Add one or more brands" id="brands" name="Brands" required>  
+<label for="uploadFile">Images & Attachments</label>
+<div class="uploadOuter">
+<span class="dragBox" >
+  Drag files from your computer or  <span style="text-decoration: underline; color: #0171d3; padding-inline: 3px;"> choose a file </span>  to attach.
+<input type="file" onChange="dragNdrop(event)"  ondragover="drag()" ondrop="drop()" id="uploadFile"  />
+</span>
+</div>
+<div id="preview"></div>             
             <br>
-          
+          <div class="clearfix" style="text-align: right;">
       
-          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-      
-          <div class="clearfix">
-      
-            <button type="submit" class="btn">Sign Up</button>
+            <button class="btn" style="background-color: #f1f1f1; color: #333333;border: 1px solid #d1d1d1;">Preview Deal</button>
+            <button type="submit" class="btn">Submit New Deal</button>
           </div>
         </div>
       </form>
@@ -152,8 +161,6 @@
                   <button class="command" title="Justify-Center" data-command='justifycenter'><i class="fas fa-align-justify"></i></button>
                   <button class="command" title="Justify-Right" data-command='justifyright'><i class="fas fa-align-right"></i></button>
                 </div>
-              </div>
-              <div class="editor-block-controls">
                 <div>
                    <button class="command" title="Blockquote" data-command='formatBlock'><i class="fas fa-quote-right"></i></button>
                   <button class="command" title="Superscript" data-command='superscript'>A<sup>abc</sup></button>
@@ -164,7 +171,7 @@
                   <button class="command" title="Increase font" data-command='increasefontsize'><i class="fas fa-font"></i></button>
                 </div>
                 <div>
-                  <select class="wsy-command" title="Font size">
+                  <select class="wsy-command" title="Font size" id="textarea_fontsize">
                     <option value="1" selected>small</option>
                     <option value="2">normal</option>
                     <option value="3">medium</option>
@@ -174,8 +181,8 @@
                     <option value="7">xxx-large</option>
                   </select>
                 </div>
-              </div>
-            <div id="editor-block-content" contenteditable></div>
+              </div>             
+            <div id="editor-block-content"  contenteditable></div>
             </div>`
     };
 
@@ -233,6 +240,20 @@
 })(window);
 
 wsyJA.init('.wsyig');
+function dragNdrop(event) {
+    var fileName = URL.createObjectURL(event.target.files[0]);
+    var preview = document.getElementById("preview");
+    var previewImg = document.createElement("img");
+    previewImg.setAttribute("src", fileName);
+    preview.innerHTML = "";
+    preview.appendChild(previewImg);
+}
+function drag() {
+    document.getElementById('uploadFile').parentNode.className = 'draging dragBox';
+}
+function drop() {
+    document.getElementById('uploadFile').parentNode.className = 'dragBox';
+}
  </script>
 </body>
 </html>
