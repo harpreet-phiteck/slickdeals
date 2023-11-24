@@ -298,6 +298,7 @@ body {
         justify-content: space-between;
         height: 44px;
         align-items: center;
+        color: #ffffff !important;
     }
     .m_menu a svg{
         width: 15px;
