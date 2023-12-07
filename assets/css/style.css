@@ -1655,6 +1655,12 @@ img{
         padding-left: 0px;
         margin-top: 20px;
     }
+    .product-content {
+        padding: .5rem 0;
+    }
+    .product-title {
+        margin: 5px 0px;
+    }
 }
 
 
