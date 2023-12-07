@@ -754,11 +754,18 @@ img.google-img{
     width: 100%;
 }
 }
-/* product_section  */
-.products_container{
+.index_main, .product_detail_main{
     width: 100%;
     max-width: 1496px;
     margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+/* product_section  */
+.products_container{
+    width: 80%;  
     padding-top: 8px;
     padding-inline: 8px;
     padding-block: 35px;
@@ -904,7 +911,231 @@ img.google-img{
 .slick-prev {
     left: 1% !important;
     z-index: 2;
+}
+    .ads_sec {
+        display: flex;
+        width: 18.5%;
+        flex-wrap: wrap;
+        padding-block: 10vw;
+    }
+ .ads_sec .trending_list li h4 {
+        width: 60%;
+    }
+   .ads_sec .trending_list li .comment_sec {
+        width: 40%;
+    }
+    .trending_list li .discount_coupons_sec {
+        display: flex;
+        width: 100%;
+        padding: 12px 0px;
+        border-bottom: 1px solid #eaeaea;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .trending_list li .discount_coupons_sec .discount_img_sec {
+        display: flex;
+        width: 30%;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    .trending_list li .discount_coupons_sec .discount_img_sec a {
+        margin-top: 4px;
+        background-color: #b7527c;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 700;
+        line-height: 16px;
+        padding: 0px 16px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .trending_list li .discount_coupons_sec .discount_txt_sec {
+        display: flex;
+        width: 65%;
+        flex-flow: column wrap;
+    }
+    .trending_list li .discount_coupons_sec .discount_txt_sec .price_sec {
+        color: #b7527c;
+        font-size: 12px;
+        font-weight: 500;
+        margin-bottom: 4px;
+        text-decoration: none;
+    }
+    .trending_list li .discount_coupons_sec .discount_txt_sec .discount_txt {
+        color: #555555;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 4px;
+        text-decoration: none;
+    }
+    .trending_list li .discount_coupons_sec .discount_txt_sec .redeem_sec {
+        color: #999999;
+        font-size: 11px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+    .ads_sec .ad_wrapper {
+        display: flex;
+        width: 100%;
+        border: 1px solid #c7c7c7;
+        border-radius: 8px;
+        flex-wrap: wrap;
+    }
+   .ads_sec .ad_wrapper img {
+        width: 100%;
+    }
+.trending_deals_wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.trending_deals_wrapper .trending_deals_header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background: #fafafa;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+.trending_deals_wrapper .trending_deals_header .trend_header_sec {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.trending_deals_wrapper .trending_deals_header .trend_header_sec h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.trending_list {
+    list-style: none;
+    width: 100%;
+}
+.trending_list li {
+    display: flex;
+    width: 100%;
+    padding: 8px 12px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
+}
+.trending_list li:last-child {
+    border-bottom: 0px;
+}
+.trending_list li .comment_sec {
+    display: flex;
+    width: 8%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.trending_list li h4 a {
+    color: #333333;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.trending_list li .trending_like_sec {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_cmt {
+    display: flex;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_like {
+    display: flex;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_like h4 {
+    background: #fef8e7;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #999;
+}
+.trending_list li .trending_like_sec .trending_cmt img {
+    width: 16px;
+    height: 14px;
+}
+.trending_list li .trending_like_sec .trending_cmt p {
+    font-size: 11px;
+}
+@media screen and (max-width: 1840px) {
+    .trending_list li .comment_sec {
+        width: 11%;
+    }
 
+}
+@media screen and (max-width: 1450px) {  
+    .trending_list li .comment_sec {
+        width: 12%;
+    }
+    .popular_deal_page .container {
+        width: min(98%, 1519px);
+    }
+  .ads_sec .trending_list li h4 {
+        width: 46%;
+    }
+  .ads_sec .trending_list li .comment_sec {
+        width: 52%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .banner_sec .banner_img_sec {
+        width: min(33%, 475px);
+    }
+    .popular_deal_sec .popular_deal .deal_options .deal_detail .deal_detail_txt .more_options {
+        column-gap: 8px;
+    }
+    .trending_list li .comment_sec {
+        width: 13%;
+    }
+  .ads_sec .trending_list li .comment_sec {
+        width: 55%;
+    }
+    .ads_sec {
+        display: none;
+       
+    }
+    .products_container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1080px) {
+    .banner_sec .banner_txt_sec {
+        width: min(63%, 650px);
+    }
+    .banner_sec .banner_txt_sec h2 {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+    .banner_sec .banner_img_sec {
+        width: min(30%, 475px);
+    }
+    .popular_deal_element h4 {
+        font-size: 12px;
+    }
+    a {
+        font-size: 10px;
+    }
+    .offer_wrapper .offer_sec {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .offer_wrapper .offer_sec .offer_sec_elements p {
+        width: min(28vw, 245px);
+    }
 }
 @media screen and (max-width: 1200px) {
     .products_container .product_container{
@@ -1234,10 +1465,11 @@ form .post_deal_container button:hover {
     }
 }
 /* product_detail  */
+.product_detail_main .ads_sec{
+    width: 18%;
+}
 .card-wrapper{
-    width: 95%;
-    max-width: 1100px;
-    margin: 0 auto;
+    width: 80%;
     padding: 25px;
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -1263,14 +1495,11 @@ form .post_deal_container button:hover {
     font-size: 14px;
     color:#0171d3;
 }
-.card-wrapper .product-report-issue a:first-child{
-
-}
 .card-wrapper .product-report-issue ul li{
     display: inline-block;
 }
 
-img{
+.card img{
     width: 100%;
     display: block;
 }
