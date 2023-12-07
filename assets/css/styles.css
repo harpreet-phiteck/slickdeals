@@ -674,9 +674,10 @@ body {
 .popular_deal_wrapper {
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 .popular_deal_element {
     display: flex !important;
@@ -914,6 +915,7 @@ body {
     border: 1px solid #d6d6d6;
     border-radius: 4px;
     margin-top: 10px;
+    margin-bottom: 50px;
 }
 .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_header_sec {
     display: flex;
@@ -1107,11 +1109,206 @@ body {
     height: 36px;
     text-decoration: none;
 }
+.trending_deals_wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.trending_deals_wrapper .trending_deals_header {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background: #fafafa;
+    border-bottom: 1px solid #d8d8d8;
+    border-radius: 10px;
+}
+.trending_deals_wrapper .trending_deals_header .trend_header_sec {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #d8d8d8;
+}
+.trending_deals_wrapper .trending_deals_header .trend_header_sec h1 {
+    font-size: 16px;
+    font-weight: 600;
+}
+.trending_list {
+    list-style: none;
+    width: 100%;
+}
+.trending_list li {
+    display: flex;
+    width: 100%;
+    padding: 8px 12px;
+    justify-content: space-between;
+    border-bottom: 1px solid #d8d8d8;
+}
+.trending_list li:last-child {
+    border-bottom: 0px;
+}
+.trending_list li .comment_sec {
+    display: flex;
+    width: 8%;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+.trending_list li h4 a {
+    color: #333333;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.trending_list li .trending_like_sec {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_cmt {
+    display: flex;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_like {
+    display: flex;
+    gap: 6px;
+}
+.trending_list li .trending_like_sec .trending_like h4 {
+    background: #fef8e7;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #999;
+}
+.trending_list li .trending_like_sec .trending_cmt img {
+    width: 16px;
+    height: 14px;
+}
+.trending_list li .trending_like_sec .trending_cmt p {
+    font-size: 11px;
+}
+/* Ads Section Css Starts Here */
+.popular_deal_wrapper .ads_sec {
+    display: flex;
+    width: 18.5%;
+    flex-wrap: wrap;
+}
+.popular_deal_wrapper .ads_sec .trending_list li h4 {
+    width: 60%;
+}
+.popular_deal_wrapper .ads_sec .trending_list li .comment_sec {
+    width: 40%;
+}
+.trending_list li .discount_coupons_sec {
+    display: flex;
+    width: 100%;
+    padding: 12px 0px;
+    border-bottom: 1px solid #eaeaea;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.trending_list li .discount_coupons_sec .discount_img_sec {
+    display: flex;
+    width: 30%;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.trending_list li .discount_coupons_sec .discount_img_sec a {
+    margin-top: 4px;
+    background-color: #b7527c;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 16px;
+    padding: 0px 16px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.trending_list li .discount_coupons_sec .discount_txt_sec {
+    display: flex;
+    width: 65%;
+    flex-flow: column wrap;
+}
+.trending_list li .discount_coupons_sec .discount_txt_sec .price_sec {
+    color: #b7527c;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+.trending_list li .discount_coupons_sec .discount_txt_sec .discount_txt {
+    color: #555555;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    text-decoration: none;
+}
+.trending_list li .discount_coupons_sec .discount_txt_sec .redeem_sec {
+    color: #999999;
+    font-size: 11px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.popular_deal_wrapper .ads_sec .ad_wrapper {
+    display: flex;
+    width: 100%;
+    border: 1px solid #c7c7c7;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+.popular_deal_wrapper .ads_sec .ad_wrapper img {
+    width: 100%;
+}
+/* Press Page CSS STARTS HERE..... */
+.press_wrapper {
+    width: 100%;
+}
+.press_container {
+    width: min(65vw, 1200px);
+    margin: 0 auto;
+}
+.press_wrapper .press_header_sec {
+    padding: 120px 0px;
+}
 
 /* Media Queries of Deal Alert Page */
+@media screen and (max-width: 1840px) {
+    .trending_list li .comment_sec {
+        width: 11%;
+    }
+    .popular_deal_page .container {
+        width: min(90%, 1519px);
+    }
+}
+@media screen and (max-width: 1540px) {
+    .popular_deal_page .container {
+        width: min(96%, 1519px);
+    }
+}
 @media screen and (max-width: 1450px) {
     .container {
         width: min(85%, 1519px);
+    }
+    .trending_list li .comment_sec {
+        width: 12%;
+    }
+    .popular_deal_page .container {
+        width: min(98%, 1519px);
+    }
+    .popular_deal_wrapper .ads_sec .trending_list li h4 {
+        width: 46%;
+    }
+    .popular_deal_wrapper .ads_sec .trending_list li .comment_sec {
+        width: 52%;
     }
 }
 @media screen and (max-width: 1250px) {
@@ -1120,6 +1317,12 @@ body {
     }
     .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_detail .deal_detail_txt .more_options {
         column-gap: 8px;
+    }
+    .trending_list li .comment_sec {
+        width: 13%;
+    }
+    .popular_deal_wrapper .ads_sec .trending_list li .comment_sec {
+        width: 55%;
     }
 }
 @media screen and (max-width: 1080px) {
@@ -1158,13 +1361,6 @@ body {
     }
     .catergory_wrapper .category_sec {
         display: none;
-    }
-    .mobile_version {
-        display: flex !important;
-        margin: 20px 0px;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
     }
     .mobile_version .mobile_category_wrapper {
         display: flex;
@@ -1236,6 +1432,78 @@ body {
         align-items: center;
         justify-content: flex-start;
         flex-flow: column wrap;
+    }
+    /* Popular Deals Page Css */
+    .popular_deal_page .container {
+        width: min(96%, 1519px);
+    }
+    .popular_deal_wrapper .popular_deal_sec {
+        width: 100%;
+    }
+    .trending_deals_wrapper {
+        width: 100%;
+    }
+    .popular_deal_wrapper .ads_sec {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .popular_deal_wrapper .popular_deal_sec .popular_deal {
+        border: 0px;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_header_sec {
+        display: none;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options {
+        display: none;
+        border-bottom: 0px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 3px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+    }
+    .mobile_version {
+        display: flex !important;
+        margin: 20px 0px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .mobile_version .deal_options {
+        display: flex !important;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_detail {
+        display: flex;
+        width: 100%;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_detail .deal_detail_txt {
+        justify-content: flex-start;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_detail .deal_detail_txt .more_options {
+        display: none;
+    }
+    .mobile_sec {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        margin-left: 15%;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_activity_sec {
+        width: 100%;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_price_sec {
+        width: 10%;
+        justify-content: flex-start;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_activity_sec .deal_activity_detail {
+        width: 12%;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_footer_sec {
+        display: none;
+    }
+    .trending_list li h4 {
+        width: 70%;
+    }
+    .trending_list li .comment_sec {
+        width: 15%;
     }
 }
 @media screen and (max-width: 680px) {
@@ -1320,6 +1588,21 @@ body {
     .sub-category-sec {
         width: 100%;
     }
+    .trending_list li .comment_sec {
+        width: 20%;
+    }
+}
+@media screen and (max-width: 540px) {
+    .mobile_sec {
+        width: 75%;
+        margin-left: 23%;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_activity_sec .deal_activity_detail {
+        width: 25%;
+    }
+    .trending_list li .comment_sec {
+        width: 26%;
+    }
 }
 @media screen and (max-width: 400px) {
     .page_title_sec {
@@ -1370,12 +1653,29 @@ body {
         font-size: min(4vw, 21px);
         line-height: min(4vw, 30px);
     }
+    .trending_list li h4 {
+        width: 60%;
+    }
+    .trending_list li .comment_sec {
+        width: 33%;
+    }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
     .deal_double_sec .deal_day_txt {
         padding: 20px;
     }
     .container {
         width: min(83%, 1519px);
+    }
+    .mobile_sec {
+        width: 70%;
+        margin-left: 30%;
+        margin-top: 10px;
+    }
+    .popular_deal_wrapper .popular_deal_sec .popular_deal .deal_options .deal_activity_sec .deal_activity_detail {
+        width: 30%;
+    }
+    .trending_list li .comment_sec {
+        width: 38%;
     }
 }
