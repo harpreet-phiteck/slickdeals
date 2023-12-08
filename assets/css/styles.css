@@ -1717,6 +1717,9 @@ body {
     .orange_box {
         display: none;
     }
+    .press_wrapper .learn_more_wrapper {
+        padding: 0px 0px 120px;
+    }
 }
 @media screen and (max-width: 767px) {
     .popular_deal_wrapper .popular_deal_sec .popular_deal {
