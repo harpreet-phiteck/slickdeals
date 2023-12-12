@@ -274,11 +274,7 @@ body {
     display: none;
   }
   
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .sd_header .sd_categories_bar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
+
   .sd_header .sd_categories_bar ul{
     width: 1660px;
     margin: auto;
@@ -1128,7 +1124,7 @@ img.google-img{
     .popular_deal_element h4 {
         font-size: 12px;
     }
-    a {
+    .popular_deal_element a {
         font-size: 10px;
     }
     .offer_wrapper .offer_sec {
@@ -1572,7 +1568,7 @@ form .post_deal_container button:hover {
     padding: 2rem 0;
 }
 .product-title{
-    font-size:min(5vw, 32px);
+    font-size:min(7vw, 32px);
     text-transform: capitalize;
     font-weight: 300;
     position: relative;
@@ -1696,7 +1692,7 @@ form .post_deal_container button:hover {
     display: flex;
     flex-direction: column;
 }
-.purchase-info .btn{
+.purchase-info .btn,.get-deal-btn{
     border: 1.5px solid #ddd;
     border-radius: 25px;
     text-align: center;
@@ -1716,7 +1712,7 @@ form .post_deal_container button:hover {
     cursor: pointer;
     color: #fff;
 }
-.purchase-info .btn:first-of-type{
+.purchase-info .btn:first-of-type,.get-deal-btn{
     background: #256eff;
     font-weight: 600;
     font-size: 15px;
@@ -1762,6 +1758,77 @@ form .post_deal_container button:hover {
     border-color: transparent;
     color: #fff;
 }
+.card-wrapper .deals_score_rate_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8e8e8;
+    padding: 15px;
+    border-radius: 8px;
+    margin-block: 10px;
+
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul li{
+    display: flex;
+    align-items: center;
+    margin-inline: 5px;
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul li span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul li:first-child span:first-child{
+    background-color:#fae4a8;
+    padding: 3px 9px;
+    text-align: center;
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul li:first-child span:last-child{
+    background-color:#fef8e7;
+    padding: 9px 9px;
+    font-size: 14px;
+    text-align: center;
+}
+.card-wrapper .deals_score_rate_wrapper div:first-child ul li:nth-child(2) span{
+    background-color:#e8e8e8;
+    padding: 9px 11px;
+    margin-right: 5px;
+}
+.card-wrapper .deals_score_rate_wrapper div:last-child ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card-wrapper .deals_score_rate_wrapper div:last-child ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.card-wrapper .deals_score_rate_wrapper div:last-child ul li:first-child span:first-child{
+    font-size: 24px;
+    font-weight: 600;
+}
+.card-wrapper .deals_score_rate_wrapper div:last-child ul li:first-child span:last-child{
+    text-decoration: line-through;
+    color: #c64111;
+    margin-left: 5px;
+}
+.card-wrapper .deals_score_rate_wrapper div:last-child ul li:last-child a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 22px;
+    background-color: #256eff;
+    font-weight: 600;
+}
 @media screen and (max-width: 1250px) {
     .card-wrapper{
         width: 100%;
@@ -1788,12 +1855,107 @@ form .post_deal_container button:hover {
         padding-top: 0;
         width: 70%;
     }
+ 
+}
+.card-wrapper > div > .product-header{
+    display: block;
+}
+.card .product-content .product-header{
+    display: none;
+}
+@media screen and (max-width:991px) {
+    .card-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+    }
+    .card-wrapper > div > .product-header,.product_page_tag{
+        display: none;
+    }
+   .card .product_page_tag{
+        display: none;
+    }
+    .card .product-header hr{
+        display: none;
+    }
+    .card .product-content .product-header{
+        display: block;
+    }
+    .card-wrapper .card{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card .product-content {
+        display: block;
+        width: 100%;
+    }
+    .card .product-content{
+        width: 100%;
+    } 
+    .card .product-imgs{
+        width: 100%;  
+}
+.product-detail-list ul{
+    width: 90%;
+    margin: auto;
+}
+.img-display{
+    margin-inline: 0px;
+}
+.img-select{
+    margin-inline: 0px;
+}
+.social-links-response li:nth-child(even){
+    display: none;
+}
+.purchase-info{
+    display: none;
+}
+}
+@media screen and (max-width:768px) {
+    .card-wrapper{
+        padding: 20px;
+    }
+    .card-wrapper .deals_score_rate_wrapper{
+        flex-wrap: wrap;
+        padding: 15px 10px;
+    }
+    .card-wrapper .deals_score_rate_wrapper div{
+        width: 100%;
+    }
+    .card-wrapper .deals_score_rate_wrapper div:first-child ul{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .card-wrapper .deals_score_rate_wrapper div:last-child ul{
+        justify-content: space-between;
+    }
+    .card-wrapper .deals_score_rate_wrapper li{
+        margin-bottom: 15px;
+        margin-inline: 0px !important;
+    }
+    .card-wrapper .deals_score_rate_wrapper a{
+        margin-right: 0px !important;
+    }
+    .card-wrapper .deals_score_rate_wrapper span{   
+        margin-right: 0px !important;
+    }
+    .card-wrapper .deals_score_rate_wrapper div:last-child ul li:last-child a {
+        font-size: 12px;
+        padding: 10px;
+    }
+    .card-wrapper .deals_score_rate_wrapper div:last-child ul li:first-child span:first-child {
+        font-size: 20px;
+    }
+    .user-comments-container .user-profile-detail div:not(:first-child){
+        display: none;
+    }
 }
 .product-comment-section .container {
 	margin: 30px auto;
     margin-top: 15px;
 	background: #fff;
-	padding: 25px 15px;
+	padding: 25px 0px;
     border-top: 1px solid #e5e5e5;
 }
 
@@ -1922,15 +2084,19 @@ form .post_deal_container button:hover {
     background-color: #000000;
 }
 @media screen and (max-width: 991px) {
+    .user-comments-container {
+        padding-top: 40px;
+    }
     .user-comments-container .user-comment-detail{       
         padding-left: 0px;
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .product-content {
         padding: .5rem 0;
     }
     .product-title {
         margin: 5px 0px;
+        text-align: center;
     }
 }
 
